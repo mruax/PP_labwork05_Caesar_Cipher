@@ -1,5 +1,5 @@
-import sys
 import string
+import sys
 
 from PyQt6.QtWidgets import QApplication, QMainWindow, QButtonGroup
 
