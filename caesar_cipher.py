@@ -5,6 +5,9 @@ def translatation(dictionary, word, n):
     answer = ""
     length = len(dictionary)
     for letter in word:
+        if not (letter.lower() in dictionary):
+            answer += letter
+            continue
         if letter.isupper():
             new_index = (dictionary.index(letter.lower()) + n) % length
             answer += dictionary[new_index].upper()
@@ -14,10 +17,8 @@ def translatation(dictionary, word, n):
     return answer
 
 
-english_alphabet = string.ascii_lowercase
-russian_alphabet = [chr(i) for i in range(ord('а'), ord('я')+1)]
-a = input("Введи слово")
-print(russian_alphabet)
-print(a)
-b = translatation(russian_alphabet, a, 5)
-print(b)
+# a = input("Введи слово")
+# print(russian_alphabet)
+# print(a)
+# b = translatation(russian_alphabet, a, 5)
+# print(b)
