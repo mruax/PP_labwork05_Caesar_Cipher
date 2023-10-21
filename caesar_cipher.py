@@ -1,6 +1,3 @@
-import string
-
-
 def translatation(dictionary, word, n):
     answer = ""
     length = len(dictionary)
@@ -15,10 +12,3 @@ def translatation(dictionary, word, n):
             new_index = (dictionary.index(letter) + n) % length
             answer += dictionary[new_index]
     return answer
-
-
-# a = input("Введи слово")
-# print(russian_alphabet)
-# print(a)
-# b = translatation(russian_alphabet, a, 5)
-# print(b)
